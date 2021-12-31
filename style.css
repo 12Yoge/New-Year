@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(wish.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner {
+    height: 100vh;
+}
+
+.banner:before {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(snow1.png);
+    background: url(snow2.png);
+    background: url(snow3.png);
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 550px;
+    }
+}
+.bubble img{
+    width: 50%;
+    animation: bubble 50s linear infinite;
+}
+.bubble{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -40;
+}
+
+@keyframes bubble{
+    0%{
+        transform: translatex(40vh);
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    } 
+    70%{
+        opacity: 1;
+    } 
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
